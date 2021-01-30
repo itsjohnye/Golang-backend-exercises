@@ -64,5 +64,4 @@ func main() {
 	}
 
 	fmt.Println(curiosity.message())
-
 }
