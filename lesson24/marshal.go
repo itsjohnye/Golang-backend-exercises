@@ -64,5 +64,4 @@ func main() {
 	}
 
 	fmt.Println(string(message)) //message是[]byte类型，转化成string类型便于查看
-
 }
