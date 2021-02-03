@@ -1,2 +1,3 @@
-《Get Programming with Go》Exercises \
-《Go语言趣学指南》练习
+Exercises from:
+1.《Get Programming with Go》
+2.Mongodb.com blog golang quickstart
