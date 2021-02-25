@@ -50,7 +50,7 @@ func main() {
 		if err = cursor.Decode(&episode); err != nil {
 			log.Fatal(err)
 		}
-		//	fmt.Println(episode)
+		fmt.Println(episode)
 	}
 
 	//Reading a Single Document
@@ -58,7 +58,7 @@ func main() {
 	if err = podcastsCollection.FindOne(ctx, bson.M{}).Decode(&podcast); err != nil {
 		log.Fatal(err)
 	}
-	//	fmt.Println(podcast)
+	fmt.Println(podcast)
 
 	//Querying Documents from a Collection with a Filter
 	filterCursor, err := episodesCollection.Find(ctx, bson.M{"duration": 25})
@@ -69,7 +69,7 @@ func main() {
 	if err = filterCursor.All(ctx, &episodesFiltered); err != nil {
 		log.Fatal(err)
 	}
-	//	fmt.Println(episodesFiltered)
+	fmt.Println(episodesFiltered)
 
 	//Sorting Documents in a Query
 	opts := options.Find()                       //leverage the FindOptions struct in the MongoDB Go Driver
