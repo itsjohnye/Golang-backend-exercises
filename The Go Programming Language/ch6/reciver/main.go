@@ -39,4 +39,22 @@ func main() {
 	q := Point{4, 6}
 	pptr := &p2
 	fmt.Printf("pptr's Type is %T, pptr.Distance(q)=%v\n", pptr, pptr.Distance(q)) //pptr隐式转换为*pptr
+
+	list := IntList{Value: 5}
+	fmt.Printf("List sum: %v, of list: %#v\n", list.Sum(), list)
+}
+
+//IntList是整型链表
+//*IntList的类型nil代表空列表
+type IntList struct {
+	Value int
+	Tail  *IntList
+}
+
+//Sum返回列表元素的总和
+func (list *IntList) Sum() int {
+	if list == nil {
+		return 0
+	}
+	return list.Value + list.Tail.Sum()
 }
