@@ -46,7 +46,7 @@ func (s *Shop) icer(iced chan<- cake, baked <-chan cake) {
 	}
 }
 
-//雕刻？
+//雕刻
 func (s *Shop) inscriber(iced <-chan cake) {
 	for i := 0; i < s.Cakes; i++ {
 		c := <-iced
