@@ -1,3 +1,5 @@
+//netcat3 is a simple netcat clone in Go.
+
 package main
 
 import (
